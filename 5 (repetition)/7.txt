@@ -1,0 +1,7 @@
+for i:1..21
+    for p:1..21
+        exit when p=i 
+        put "*"..
+    end for
+    put " "
+end for

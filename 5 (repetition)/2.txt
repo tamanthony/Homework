@@ -1,0 +1,9 @@
+var number:int
+var product:int
+put "Enter a number: "..
+get number
+
+for i:0..13
+    product := number * i
+    put number, "*",i," = ",product
+end for

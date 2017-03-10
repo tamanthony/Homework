@@ -1,0 +1,7 @@
+%I didn't use mod on purpose :)
+var p:int:=2
+    for i:0..10
+        put (p*i)*(p*i)
+    end for
+    
+    
