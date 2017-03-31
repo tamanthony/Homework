@@ -1,0 +1,14 @@
+var ave : int 
+var num : int
+var weight : int
+ave:=0
+num:=0
+loop
+    put "Insert the weight of a package, enter 0 to calculate average weight "..
+    get weight
+    ave += weight
+    exit when weight = 0
+    num += 1
+end loop
+put "Your average package number is ", ave/num 
+        

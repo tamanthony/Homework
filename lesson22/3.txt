@@ -1,0 +1,24 @@
+var height:real
+var typeheight:string
+var feet:real
+var inch:real
+put "Input your height in cm or inches"
+get height
+loop
+put "Is this in cm or inch?"
+get typeheight
+if typeheight = "cm" then
+    height:=height/2.54
+    feet:=height div 12
+    inch:=floor(height) mod 12
+    put "You are ",feet," foot ",inch," inches"
+    exit
+elsif typeheight = "inch" then
+    put "Your height in cm is ", height*2.5
+    exit
+else
+    cls
+    put "That isn't a valid meausurement type"
+    put "Please input 'cm' or 'inch'"
+end if
+end loop

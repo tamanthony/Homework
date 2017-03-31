@@ -1,0 +1,7 @@
+var name : string 
+loop
+    get name
+    if length(name) >= 2 then
+        put name(1 .. 1), " ", name (* .. *)
+    end if
+end loop

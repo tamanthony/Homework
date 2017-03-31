@@ -1,0 +1,10 @@
+var name : string
+var namelength, i : int := 0
+put "Enter names, enter 'done' to stop"
+loop
+    get name
+    exit when name = "done"
+    namelength += length(name)
+    i += 1
+end loop
+put "The average length of the names entered ", namelength/i

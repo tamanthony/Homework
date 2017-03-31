@@ -1,0 +1,12 @@
+var words : array 1 .. 10 of string
+var word : string
+for i : 1 .. 10
+    get words(i)
+end for
+    word := words(1)
+for i : 1 .. 10
+    if length(words(i)) > length(word) then
+        word := words(i)
+    end if
+end for
+    put word

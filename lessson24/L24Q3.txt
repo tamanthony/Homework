@@ -1,0 +1,10 @@
+var name : string
+var vowel : int := 0
+put "Enter a name: " ..
+get name
+for i : 1 .. length (name)
+    if index ('aieouAIEOU', name(i)) not= 0 then
+        vowel += 1
+    end if
+end for
+put vowel

@@ -1,0 +1,11 @@
+var name : array 1 .. 10 of string
+var namelengths : real := 0
+put "Enter 10 names"  
+for i : 1 .. 10
+    get name(i)
+end for
+for i : 1 .. 10
+    namelengths += length(name(i))
+end for
+    put "The average lengths of the names entered is: ", namelengths/10
+
