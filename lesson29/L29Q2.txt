@@ -1,0 +1,10 @@
+var counter, random : int
+counter := 0
+loop
+    random := Rand.Int (1, 100)
+    if random >= 90 and random <= 99 then
+        exit
+    end if
+    counter += 1
+end loop
+put counter
