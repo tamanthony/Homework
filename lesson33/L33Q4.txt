@@ -1,0 +1,14 @@
+function double(num : real) : real
+    result num*2
+end double
+var num : real
+put "Gimme number"
+get num
+loop
+    num := double(num)
+    put num
+    exit when num > 1337
+end loop 
+put "Your number is greater than 1337"
+
+

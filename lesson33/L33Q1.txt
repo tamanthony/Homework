@@ -1,0 +1,17 @@
+function hasS (word : string) : boolean
+    if index ("sS", word (1)) not= 0 then
+        result true
+    else
+        result false
+    end if
+end hasS
+
+var word : string
+put "Give me a word"
+get word
+if hasS (word) then
+    put "Your word starts with s"
+else
+    put "Your word doesn't start with s"
+end if
+

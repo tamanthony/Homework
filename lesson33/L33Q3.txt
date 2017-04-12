@@ -1,0 +1,25 @@
+function isReverse (word : string) : boolean
+    var reverseword : string := ""
+    for decreasing i : length(word) .. 1
+        reverseword += word(i)
+    end for
+    if reverseword = word then
+        result true
+    else 
+        result false
+    end if
+end isReverse
+var word : string
+put "Input a word"
+get word
+if isReverse(word) then
+    put "Your word is a palindrome"
+else 
+    put "Your word is not a palindrome"
+end if
+
+
+        
+        
+
+

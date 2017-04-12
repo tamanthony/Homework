@@ -1,0 +1,24 @@
+%reverse string function
+function reverseString (word : string) : string
+    var reverseword : string := ""
+    for decreasing i : length(word) .. 1
+        reverseword += word(i)
+    end for
+    result reverseword
+end reverseString
+%glue two string together function
+function glueString(word, word2 : string) : string
+    result word+word2
+end glueString
+%start of program
+var word, word2, word3, ultimateword : string
+put "Input a word"
+get word
+put "Input a second word"
+get word2
+ultimateword := glueString(word,word2)
+ultimateword := reverseString(ultimateword)
+put "Input a third word"
+get word3
+ultimateword := glueString(ultimateword, word3)
+put ultimateword
