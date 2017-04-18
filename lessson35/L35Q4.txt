@@ -1,0 +1,93 @@
+var shape, aorp : int
+var l, w, r, h, a, b, c : real
+procedure areaRectangle
+    put "What is the length of the rectangle?"
+    get l
+    put "What is the width of the rectangle?"
+    get w
+    put "The area of the rectangle is ", l * w
+end areaRectangle
+
+procedure perimeterRectangle
+    put "What is the length of the rectangle?"
+    get l
+    put "What is the width of the rectangle?"
+    get w
+    put "The perimeter of the rectangle is ", l + l + w + w
+end perimeterRectangle
+
+procedure areaTriangle
+    put "What is the base length of the triangle?"
+    get b
+    put "What is the height of the rectangle?"
+    get h
+    put "The area of the triangle is ", b * h / 2
+end areaTriangle
+
+procedure perimeterTriangle
+    put "What is the length of one of the triangle's sides"
+    get a
+    put "What is the length of another of the triangle's sides"
+    get b
+    put "What is the last side's length"
+    get c
+    put "The perimeter of the triangle is ", a + b + c
+end perimeterTriangle
+
+procedure areaCircle
+    put "What is the radius of the circle"
+    get r
+    put "The area of your circle is ", r * r * 3.14
+end areaCircle
+
+procedure perimeterCircle
+    put "What is the radius of the circle?"
+    get r
+    put "The perimeter of your circle is ", r * 2 * 3.14
+end perimeterCircle
+loop
+    put "What shape would you like to calculate?"
+    put "1. Rectangle"
+    put "2. Triangle"
+    put "3. Circle"
+    get shape
+    put "Would you like to calculate area of perimeter?"
+    put "1. Area"
+    put "2. Perimeter"
+    get aorp
+    if shape = 1 then
+        if aorp = 1 then
+            cls
+            areaRectangle
+        elsif aorp = 2 then
+            cls
+            perimeterRectangle
+        else
+            cls
+            put "That isn't a valid type of measurement, try again"
+        end if
+    elsif shape = 2 then
+        if aorp = 1 then
+            cls
+            areaTriangle
+        elsif aorp = 2 then
+            cls
+            perimeterTriangle
+        else
+            cls
+            put "That isn't a valid type of measurement, try again"
+        end if
+    elsif shape = 3 then
+        if aorp = 1 then
+            areaCircle
+        elsif aorp = 2 then
+            perimeterCircle
+        else
+            cls
+            put "That isn't a valid type of measurement, try again"
+        end if
+    else
+        cls
+        put "That isn't a valid type of shape, try again"
+    end if
+end loop

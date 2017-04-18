@@ -1,0 +1,10 @@
+procedure stars (rows : int)
+    for i : 1 .. rows
+        put repeat ("%", i) ..
+        put repeat ("&", i)
+    end for
+end stars
+var rows : int
+put "Input a number"
+get rows
+stars(rows)
