@@ -1,0 +1,15 @@
+var word : string
+var middle : string := ""
+function middleChar (word : string) : string
+    if length (word) mod 2 = 0 then
+        middle += word (length (word) div 2)
+    else
+        middle += word ((length (word) - 1) div 2 + 1)
+    end if
+    result middle
+end middleChar
+
+    get word
+    put middleChar (word)
+
+

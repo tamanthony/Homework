@@ -1,0 +1,18 @@
+var word : string
+var new_word : string := ""
+var remove : char
+function removeChar (word : string, remove : char) : string
+    for i : 1 .. length (word)
+        if word (i) = remove then
+            new_word += ""
+        else
+            new_word += word (i)
+        end if
+    end for
+    result new_word
+end removeChar
+put "Input a word"
+get word
+put "Input a character to remove from that word"
+get remove
+put removeChar(word, remove)

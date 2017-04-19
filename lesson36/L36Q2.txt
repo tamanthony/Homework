@@ -1,0 +1,11 @@
+var num : int
+var str : string
+procedure maxmin (num : int)
+    for i : 1 .. num   
+        str := intstr(i)
+        put repeat(str, i)..
+        put " "..
+    end for
+end maxmin
+get num
+maxmin(num)

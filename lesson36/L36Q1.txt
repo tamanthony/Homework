@@ -1,0 +1,17 @@
+var angle1, angle2, angle3 : real
+
+procedure triangles (a, b, c : real)
+    if a = b and a = c and b = c and a + b + c = 180 then
+        put "Your triangle is equilateral"
+    elsif a + b + c > 180 or a + b + c < 180 or a <= 0 or b <= 0 or c <= 0 then
+        put "Those angle values aren't valid"
+    elsif a = b or b = c or a = c and a + b + c = 180 then
+        put "Your triangle is isoceles"
+    else
+        put "Your triangle is scalene"
+    end if
+end triangles
+get angle1
+get angle2
+get angle3
+triangles (angle1, angle2, angle3)

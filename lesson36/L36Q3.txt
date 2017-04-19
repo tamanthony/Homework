@@ -1,0 +1,21 @@
+var h, w, space : int
+procedure drawT (h,w : int)
+    for i : 1 .. w
+        put "*"..
+    end for
+    put ""
+    for i : 1 .. h
+        space := (w - 1) div 2
+        put repeat(" ", space)..
+        put "*"
+    end for
+end drawT
+put "Input a height"
+get h
+put "Input a width (must be an odd number)"
+get w
+if w mod 2 = 0 then
+    put "Width must be an odd number"
+else
+    drawT(h,w)
+end if
