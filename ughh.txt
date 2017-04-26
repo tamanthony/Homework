@@ -1,0 +1,38 @@
+import GUI
+var grow, guess, high, low, growText,randomnum : int
+procedure show
+    GUI.Show (grow)
+    GUI.Show (guess)
+    GUI.Hide (growText)
+end show
+procedure growGame
+    GUI.Show (growText)
+    GUI.Hide (grow)
+    GUI.Hide (guess)
+    put "Input a number from 1 - 1000"
+    put "You will be shown higher or lower depending on if your number was the former or the latter"
+    randomnum := Rand.Int(1,1000)
+end growGame
+
+procedure guessGame
+
+end guessGame
+procedure growTextProc (growText : string)
+    if strint(growText) > randomnum then
+        GUI.SetText(growText, "higher")
+    elsif strint (growText) < randomnum then
+        GUI.SetText(growText, "lower")
+    else 
+        GUI.SetText(growText, "You Win!")
+        delay(2000) 
+    end if
+    show
+end growTextProc
+growText := GUI.CreateTextField (320, 200, 200, "", growTextProc)
+grow := GUI.CreateButton (200, 200, 20, "Growing Game", growGame)
+guess := GUI.CreateButton (50, 200, 20, "Guessing Game", guessGame)
+
+show
+loop
+    exit when GUI.ProcessEvent
+end loop
